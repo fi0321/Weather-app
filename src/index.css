@@ -2,4 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@keyframes custom-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+}
+body {
+  min-width: 600px;
+  min-height: 400px;
+}
