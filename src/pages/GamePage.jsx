@@ -53,7 +53,7 @@ const GamePage = () => {
       setTimeout(() => {
         setShowTemperature2(false);
         updateCitiesAndScore();
-      }, 2000);
+      }, 1000);
     } else {
       setCorrect(false);
     }
