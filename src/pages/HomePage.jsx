@@ -1,5 +1,5 @@
 import React from 'react';
-import myImage from '../../assets/sean-oulashin-KMn4VEeEPR8-unsplash.jpg';
+import myImage from './../assets/sean-oulashin-KMn4VEeEPR8-unsplash.jpg';
 import { useNavigate } from 'react-router-dom';
 const HomePage = () => {
   const navigate = useNavigate();
