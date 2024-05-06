@@ -17,7 +17,7 @@ const HomePage = () => {
             <br /> Game
           </p>
           <p className=' text-center text-3xl  mt-10 p-3'>
-            Guess if the weather of a city is higher or lower than another city
+            Guess if the temperature of a city is higher or lower than another city
           </p>
           <button
             className=' mt-20 bg-amber-300/40 text-white text-5xl rounded-full py-4 px-12 text-wrap hover:bg-amber-600/60'
