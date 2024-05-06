@@ -7,7 +7,7 @@ import GamePage from './pages/GamePage';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Weather-app">
       <div>
         {/* Place any global components like a navigation bar here */}
         <Routes>

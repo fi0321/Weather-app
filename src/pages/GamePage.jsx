@@ -68,6 +68,19 @@ const GamePage = () => {
     setNeedcity2(cities[newRandom2].city);
     setScore((prevScore) => prevScore + 1);
   };
+ const resetGame = () => {
+  setScore(0); // Reset score
+  setCorrect(true); // Reset game status to true to continue playing
+  setShowTemperature2(false); // Ensure no temperature comparison overlay is shown
+  const newRandom1 = Math.floor(Math.random() * cities.length);
+  const newRandom2 = Math.floor(Math.random() * cities.length);
+  setRandom1(newRandom1);
+  setRandom2(newRandom2);
+  setNeedcity(cities[newRandom1].city);
+  setNeedcity2(cities[newRandom2].city);
+  loadtemperature(); // Reload temperatures for the new cities
+};
+
 
   useEffect(() => {
     loadtemperature();
@@ -84,16 +97,17 @@ const GamePage = () => {
         setIsLoaded={setIsLoaded}
         showTemperature2={showTemperature2}
       ></CityCompare>
-      {correct ? (
-        <OverLay
-          Needcity2={Needcity2}
-          Needcity={Needcity}
-          changeCity={changeCity}
-          showTemperature2={showTemperature2}
-        ></OverLay>
-      ) : (
-        <GameOver score={score}></GameOver>
-      )}
+     {correct ? (
+  <OverLay
+    Needcity2={Needcity2}
+    Needcity={Needcity}
+    changeCity={changeCity}
+    showTemperature2={showTemperature2}
+  ></OverLay>
+) : (
+  <GameOver score={score} resetGame={resetGame}></GameOver>
+)}
+
 
       <div className='fixed bottom-0 left-0 m-5'>
         <p className='text-white text-4xl'>Score: {score}</p>
